@@ -1,0 +1,45 @@
+{
+  "name": "gitlab-merge-request-reminder",
+  "version": "1.0.0",
+  "description": "Sends reminders of open merge requests in GitLab",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc ./.build/*.ts --noEmit",
+    "commit": "cz",
+    "release": "semantic-release",
+    "docker-build": "(cd ./reminder && docker build -t bottlecapdave/gitlab-merge-request-reminder:latest .)",
+    "docker-release": "(cd ./reminder && docker tag bottlecapdave/gitlab-merge-request-reminder:latest bottlecapdave/gitlab-merge-request-reminder:$TAG && docker push bottlecapdave/gitlab-merge-request-reminder:latest && docker push bottlecapdave/gitlab-merge-request-reminder:$TAG)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder/issues"
+  },
+  "homepage": "https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "commitizen": "4.3.0",
+    "conventional-changelog-eslint": "6.0.0",
+    "cz-customizable": "7.0.0",
+    "husky": "9.0.11",
+    "semantic-release": "24.0.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}

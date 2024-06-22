@@ -1,0 +1,30 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/exec", {
+        "prepareCmd" : "npm run docker-build",
+        "publishCmd": "TAG=${nextRelease.version} npm run docker-release"
+      }
+    ],
+    [
+      "@semantic-release/git", {
+        "assets": ["package.json", "CHANGELOG.md"],
+        "message": "release: Released v${nextRelease.version} [skip ci]"
+      }
+    ],
+    [
+      "@semantic-release/exec", {
+        "publishCmd" : "ts-node .build/createGithubRelease.ts v${nextRelease.version} \"${nextRelease.notes}\""
+      }
+    ]
+  ]
+}
