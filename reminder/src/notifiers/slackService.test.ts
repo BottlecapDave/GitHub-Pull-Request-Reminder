@@ -17,7 +17,7 @@ function createMergeRequests(): IGitHubMergeRequest[] {
     labels: [],
     head: {
       repo: {
-        full_name: "merge request reminder test",
+        full_name: "test/github-pull-request-reminder-test",
       },
     },
     title: "Merge request with mandatory labels",
@@ -32,7 +32,7 @@ function createMergeRequests(): IGitHubMergeRequest[] {
     labels: [],
     head: {
       repo: {
-        full_name: "merge request reminder test",
+        full_name: "test/github-pull-request-reminder-test",
       },
     },
     title: "wip: Merge request ",
