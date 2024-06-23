@@ -1,5 +1,5 @@
 {
-  "name": "gitlab-merge-request-reminder",
+  "name": "github-pull-request-reminder",
   "version": "1.0.0",
   "description": "Sends reminders of open merge requests in GitLab",
   "main": "index.js",
@@ -7,19 +7,19 @@
     "build": "tsc ./.build/*.ts --noEmit",
     "commit": "cz",
     "release": "semantic-release",
-    "docker-build": "(cd ./reminder && docker build -t bottlecapdave/gitlab-merge-request-reminder:latest .)",
-    "docker-release": "(cd ./reminder && docker tag bottlecapdave/gitlab-merge-request-reminder:latest bottlecapdave/gitlab-merge-request-reminder:$TAG && docker push bottlecapdave/gitlab-merge-request-reminder:latest && docker push bottlecapdave/gitlab-merge-request-reminder:$TAG)"
+    "docker-build": "(cd ./reminder && docker build -t bottlecapdave/github-pull-request-reminder:latest .)",
+    "docker-release": "(cd ./reminder && docker tag bottlecapdave/github-pull-request-reminder:latest bottlecapdave/github-pull-request-reminder:$TAG && docker push bottlecapdave/github-pull-request-reminder:latest && docker push bottlecapdave/github-pull-request-reminder:$TAG&& docker push bottlecapdave/github-pull-request-reminder:1)"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder.git"
+    "url": "git+https://github.com/BottlecapDave/github-pull-Request-Reminder.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder/issues"
+    "url": "https://github.com/BottlecapDave/github-pull-Request-Reminder/issues"
   },
-  "homepage": "https://github.com/BottlecapDave/Gitlab-Merge-Request-Reminder#readme",
+  "homepage": "https://github.com/BottlecapDave/github-pull-Request-Reminder#readme",
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",

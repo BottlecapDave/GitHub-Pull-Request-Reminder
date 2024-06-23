@@ -1,5 +1,5 @@
 var scopes = [
-  'gitlab',
+  'github',
   'slack', 
   'docker'
 ]
