@@ -7,11 +7,9 @@ inputs:
   github-access-token:
     description: 'The access token for the GitHub repository'
     required: true
-    default: ${{ secrets.GITHUB_TOKEN }}
   github-repos:
     description: 'The GitHub repos the pull requests are for. This should be comma separated.'
     required: true
-    default: ${{ github.repository }}
   include-wip:
     description: 'Determines if work in progress pull requests should be included.'
     required: false
