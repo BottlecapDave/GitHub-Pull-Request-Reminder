@@ -17,4 +17,4 @@ WORKDIR /app
 COPY --from=build /app/lib /app/lib
 COPY --from=build /app/node_modules /app/node_modules
 
-CMD ["node", "/app/lib/index.js"]
+ENTRYPOINT ["node", "/app/lib/index.js"]
