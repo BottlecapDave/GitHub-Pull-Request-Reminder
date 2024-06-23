@@ -8,7 +8,7 @@
     "commit": "cz",
     "release": "semantic-release",
     "docker-build": "(cd ./reminder && docker build -t bottlecapdave/github-pull-request-reminder:latest .)",
-    "docker-release": "(cd ./reminder && docker tag bottlecapdave/github-pull-request-reminder:latest bottlecapdave/github-pull-request-reminder:$TAG && docker tag bottlecapdave/github-pull-request-reminder:latest bottlecapdave/github-pull-request-reminder:1 && docker push bottlecapdave/github-pull-request-reminder:latest && docker push bottlecapdave/github-pull-request-reminder:$TAG&& docker push bottlecapdave/github-pull-request-reminder:1)"
+    "docker-release": "(cd ./reminder && docker tag bottlecapdave/github-pull-request-reminder:latest bottlecapdave/github-pull-request-reminder:$TAG && docker push bottlecapdave/github-pull-request-reminder:latest && docker push bottlecapdave/github-pull-request-reminder:$TAG)"
   },
   "repository": {
     "type": "git",

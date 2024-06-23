@@ -1,6 +1,6 @@
 # GitHub Merge Request Reminder
 
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/bottlecapdave/github-pull-request-reminder)](https://hub.docker.com/r/bottlecapdave/github-merge-request-reminder) [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/bottlecapdave)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/bottlecapdave/github-pull-request-reminder)](https://hub.docker.com/r/bottlecapdave/github-pull-request-reminder) [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/bottlecapdave)
 
 Sends a notification to a Slack webhook highlighting open pull requests for a given GitHub repository. If no pull requests are open, then no notification will be sent.
 
@@ -27,16 +27,7 @@ Because the logic is within a docker image, it can be run in a variety of places
 
 ### GitHub Action
 
-You could create a GitHub action which is run on a schedule. For example
-
-```
-pull-request-reminder:
-  stage: notify
-  image: bottlecapdave/github-pull-request-reminder:latest
-  only:
-    refs:
-      - schedules
-```
+This is available as a [GitHub action](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder-Action).
 
 ## Build
 
