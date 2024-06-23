@@ -12,8 +12,8 @@ Sends a notification to a Slack webhook highlighting open pull requests for a gi
 | GITHUB_REPOS   | The GitHub repos the pull requests are for. This should be comma separated. | `bottlecapdave/github-pull-request-reminder,bottlecapdave/gitlab-merge-request-reminder` |
 | INCLUDE_WIP          | Determines if work in progress pull requests should be included. This is true by default.                  | `true` or `false` |
 | INCLUDE_DRAFT        | Determines if draft pull requests should be included. This is true by default.                            | `true` or `false` |
-| GITHUB_MANDATORY_LABELS | The labels that pull requests must have assigned to them. All labels must be present. This should be comma separated (e.g. mandatory-label-1,mandatory-label-2) | `mandatory-label-1,mandatory-label-2` |
-| GITHUB_EXCLUDED_LABELS | The labels that pull requests must not have assigned to them. Any label must be present for the merge request to be ignored. This should be comma separated (e.g. excluded-label-1,excluded-label-2) | `excluded-label-1,excluded-label-2` |
+| GITHUB_MANDATORY_LABELS | The labels that pull requests must have assigned to them. All labels must be present. This should be comma separated. | `mandatory-label-1,mandatory-label-2` |
+| GITHUB_EXCLUDED_LABELS | The labels that pull requests must not have assigned to them. Any label must be present for the merge request to be ignored. This should be comma separated. | `excluded-label-1,excluded-label-2` |
 | SLACK_WEBHOOK_URL    | The URL of the slack incoming webhook to send the notification to.                                            |                |
 | SLACK_TARGET         | The target of the slack message. This is `@here` by default. | `@here` |
 
