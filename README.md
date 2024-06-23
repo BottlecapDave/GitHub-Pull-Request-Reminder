@@ -27,7 +27,28 @@ Because the logic is within a docker image, it can be run in a variety of places
 
 ### GitHub Action
 
-This is available as a [GitHub action](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder-Action).
+This is available as a GitHub Action. You can run it on a schedule like so
+
+```
+name: Pull Request Reminder
+on:
+  schedule:
+    - cron: "0 9 * * *"
+
+jobs:
+  pull-request-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull request reminder
+        uses: BottlecapDave/GitHub-Pull-Request-Reminder@v1.0.0
+        with:
+          github-access-token: ${{ secrets.GITHUB_TOKEN }}
+          github-repos: ${{ github.repository }}
+          include-wip: 'true'
+          include-draft: 'true'
+          mandatory-labels: 'test-label-1,test-label-2'
+          slack-webhook-url: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
+```
 
 ## Build
 
