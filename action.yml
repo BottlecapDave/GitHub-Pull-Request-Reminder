@@ -32,7 +32,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'bottlecapdave/github-pull-request-reminder:1.0.0'
+  image: './reminder/Dockerfile'
   env:
     GITHUB_ACCESS_TOKEN: ${{ inputs.github-access-token }}
     GITHUB_REPOS: ${{ inputs.github-repos }}
