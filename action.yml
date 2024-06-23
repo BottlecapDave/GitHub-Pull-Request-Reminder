@@ -42,3 +42,6 @@ runs:
     GITHUB_EXCLUDED_LABELS: ${{ inputs.excluded-labels }}
     SLACK_WEBHOOK_URL: ${{ inputs.slack-webhook-url }}
     SLACK_TARGET: ${{ inputs.slack-target }}
+  args:
+    - node
+    - /app/lib/index.js
