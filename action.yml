@@ -1,4 +1,4 @@
-name: 'GitHub Pull Request Reminder'
+name: 'BottlecapDave GitHub Pull Request Reminder'
 description: 'Send reminders to a slack channel of open pull requests, regardless of who are assigned to them'
 branding:
   icon: git-pull-request
