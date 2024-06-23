@@ -1,0 +1,43 @@
+name: 'GitHub Pull Request Reminder'
+description: 'Send reminders to a slack channel of open pull requests, regardless of who are assigned to them'
+inputs:
+  github-access-token:
+    description: 'The access token for the GitHub repository'
+    required: true
+    default: ${{ secrets.GITHUB_TOKEN }}
+  github-repos:
+    description: 'The GitHub repos the pull requests are for. This should be comma separated.'
+    required: true
+    default: ${{ github.repository }}
+  include-wip:
+    description: 'Determines if work in progress pull requests should be included.'
+    required: false
+    default: 'true'
+  include-draft:
+    description: 'Determines if draft pull requests should be included. This is true by default.'
+    required: false
+    default: 'true'
+  mandatory-labels:
+    description: 'The labels that pull requests must have assigned to them. All labels must be present. This should be comma separated.'
+    required: false
+  excluded-labels:
+    description: 'The labels that pull requests must not have assigned to them. Any label must be present for the merge request to be ignored. This should be comma separated.'
+    required: false
+  slack-webhook-url:
+    description: 'The URL of the slack incoming webhook to send the notification to.'
+    required: true
+  slack-target:
+    description: 'The target of the slack message. This is `@here` by default.'
+    required: false
+runs:
+  using: 'docker'
+  image: 'bottlecapdave/github-pull-request-reminder:1'
+  env:
+    GITHUB_ACCESS_TOKEN: ${{ inputs.github-access-token }}
+    GITHUB_REPOS: ${{ inputs.github-repos }}
+    INCLUDE_WIP: ${{ inputs.include-wip }}
+    INCLUDE_DRAFT: ${{ inputs.include-draft }}
+    GITHUB_MANDATORY_LABELS: ${{ inputs.mandatory-labels }}
+    GITHUB_EXCLUDED_LABELS: ${{ inputs.excluded-labels }}
+    SLACK_WEBHOOK_URL: ${{ inputs.slack-webhook-url }}
+    SLACK_TARGET: ${{ inputs.slack-target }}
