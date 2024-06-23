@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull request reminder
-        uses: BottlecapDave/GitHub-Pull-Request-Reminder@v1.0.1
+        uses: BottlecapDave/GitHub-Pull-Request-Reminder@v1.0.2
         with:
           github-access-token: ${{ secrets.GITHUB_TOKEN }}
           github-repos: ${{ github.repository }}
           include-wip: 'true'
           include-draft: 'true'
-          mandatory-labels: 'test-label-1,test-label-2'
+          mandatory-labels: 'test-label,test-label-2'
           slack-webhook-url: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
           
