@@ -1,0 +1,18 @@
+name: Action Test
+on:
+  workflow_dispatch:
+
+jobs:
+  pull-request-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull request reminder
+        uses: bottlecapdave/github-pull-request-reminder@v1
+        with:
+          github-access-token: ${{ secrets.GITHUB_TOKEN }}
+          github-repos: ${{ github.repository }}
+          include-wip: 'true'
+          include-draft: 'true'
+          mandatory-labels: 'test-label-1,test-label-2'
+          slack-webhook-url: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
+          
