@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.0...v1.0.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* Fixed docker entrypoint ([5467121](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/54671219ffaa422bfcfd863246a499559a67d97d))
+* Fixed github action ([511d5da](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/511d5daa5d381482a539e599ad901d61c8b2d7c9))
+* Fixed github action inputs ([1bffafd](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/1bffafdbc3921d693d5ffec9e58a5c23f40253af))
+
 # 1.0.0 (2024-06-23)
 
 
