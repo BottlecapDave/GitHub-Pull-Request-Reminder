@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull request reminder
-        uses: BottlecapDave/GitHub-Pull-Request-Reminder@v1.0.0
+        uses: BottlecapDave/GitHub-Pull-Request-Reminder@v1
         with:
           github-access-token: ${{ secrets.GITHUB_TOKEN }}
           github-repos: ${{ github.repository }}
