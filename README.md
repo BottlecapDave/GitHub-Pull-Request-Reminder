@@ -47,7 +47,9 @@ jobs:
           include-wip: 'true'
           include-draft: 'true'
           mandatory-labels: 'test-label-1,test-label-2'
+          excluded-labels: 'excluded-label-1,excluded-label-1'
           slack-webhook-url: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
+          slack-target: '@here'
 ```
 
 ## Build
