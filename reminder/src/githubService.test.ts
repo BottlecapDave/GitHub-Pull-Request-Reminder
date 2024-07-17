@@ -6,7 +6,7 @@ function createRequestData(): IGitHubMergeRequestRequest {
     includeWorkInProgress: true,
     repos: [process.env.TEST_REPO as string],
     mandatoryLabels: [],
-    excludedLabels: [],
+    excludedLabels: ["dependencies"],
   }
 }
 
@@ -16,7 +16,8 @@ function getAccessToken(): string {
 
 function assertMergeRequest(mergeRequest: IGitHubMergeRequest) {
   expect(mergeRequest.head.repo.full_name).toEqual('BottlecapDave/GitHub-Pull-Request-Reminder');
-  expect(mergeRequest.user.login).toEqual('BottlecapDave');
+  expect(mergeRequest.user.login === 'dependabot[bot]' || mergeRequest.user.login === 'BottlecapDave').toEqual(true);
+  expect(mergeRequest.html_url.startsWith("https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/pull/")).toEqual(true);
 }
 
 function assertMergeRequests(mergeRequests: IGitHubMergeRequest[], includeWip: boolean, includeDraft: boolean) {

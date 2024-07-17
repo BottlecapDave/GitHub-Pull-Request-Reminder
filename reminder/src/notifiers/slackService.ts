@@ -26,7 +26,7 @@ export class SlackService {
                 type: "section",
                 text: {
                     type: "mrkdwn",
-                    text: `*<${request.url}|(${request.head.repo.full_name}) ${request.title}>*\n${request.user.login} | opened ${formatDistance(request.created_at, new Date())}`
+                    text: `*<${request.html_url}|(${request.head.repo.full_name}) ${request.title}>*\n${request.user.login} | opened ${formatDistance(request.created_at, new Date())}`
                 }
             })
         }
