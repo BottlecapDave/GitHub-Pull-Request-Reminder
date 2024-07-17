@@ -57,3 +57,6 @@ jobs:
           from_branch: main
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: Actions-R-Us/actions-tagger@v2
+        with:
+          prefer_branch_releases: true

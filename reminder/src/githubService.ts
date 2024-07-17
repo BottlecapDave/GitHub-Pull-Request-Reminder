@@ -19,7 +19,7 @@ export interface IGitHubMergeRequest {
     };
     created_at: string;
     user: IGitHubAuthor;
-    url: string;
+    html_url: string;
     labels: IGitHubLabel[];
     draft: boolean;
 }
