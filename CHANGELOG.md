@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.2...v1.0.3) (2024-07-17)
+
+
+### Bug Fixes
+
+* Fixed link to pull request in raised slack messages ([a0f9af2](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/a0f9af25ce7405ef844be4992c0cf7ecbf83e006))
+
 ## [1.0.2](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.1...v1.0.2) (2024-06-23)
 
 
