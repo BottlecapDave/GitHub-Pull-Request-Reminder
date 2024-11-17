@@ -1,4 +1,4 @@
-FROM node:20.2-buster-slim as build
+FROM node:20.15-buster-slim as build
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY src/. src/.
 
 RUN npm run build
 
-FROM node:20.2-buster-slim as deploy
+FROM node:20.15-buster-slim as deploy
 WORKDIR /app
 
 COPY --from=build /app/lib /app/lib
