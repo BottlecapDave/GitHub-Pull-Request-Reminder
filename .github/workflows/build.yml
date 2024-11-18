@@ -4,6 +4,8 @@ on:
     branches:
       - develop
   pull_request_target:
+    branches:
+      - 'dependabot/**'
 
 env:
   TEST_GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
