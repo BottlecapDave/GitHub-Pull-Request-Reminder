@@ -11,6 +11,9 @@ env:
   TEST_REPO: ${{ github.repository }}
   TEST_SLACK_WEBHOOK_URL: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
 
+permissions:
+  actions: write
+
 jobs:
   build:
     name: Build
