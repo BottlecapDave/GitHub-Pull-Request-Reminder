@@ -6,10 +6,36 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    directories:
+      - "**/*"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: deps
+    groups:
+      major:
+        applies-to: version-updates
+        update-types:
+        - "major"
+      minor_patch:
+        applies-to: version-updates
+        update-types:
+        - "minor"
+        - "patch"
   - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    directories:
+      - "**/*"
     schedule:
       interval: "weekly"
+    commit-message:
+      prefix: deps
+    groups:
+      major:
+        applies-to: version-updates
+        update-types:
+        - "major"
+      minor_patch:
+        applies-to: version-updates
+        update-types:
+        - "minor"
+        - "patch"
