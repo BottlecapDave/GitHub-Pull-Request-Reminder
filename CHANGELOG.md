@@ -1,3 +1,5 @@
+## [1.0.4](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.3...v1.0.4) (2024-12-28)
+
 ## [1.0.3](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.2...v1.0.3) (2024-07-17)
 
 
