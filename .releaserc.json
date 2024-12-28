@@ -6,7 +6,7 @@
       {
         "preset": "angular",
         "releaseRules": [
-          { "type": "deps", "release": "patch" }
+          { "type": "chore", "scope": "deps-dev", "release": "patch" }
         ]
       }
     ],
@@ -16,7 +16,7 @@
         "preset": "angular",
         "presetConfig": {
           "types": [
-            { "type": "deps", "section": "Dependencies", "hidden": false }
+            { "type": "chore", "scope": "deps-dev", "section": "Dependencies", "hidden": false }
           ]
         }
       }
