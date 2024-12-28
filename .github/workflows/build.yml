@@ -3,13 +3,16 @@ on:
   push:
     branches:
       - develop
-  pull_request:
+  pull_request_target:
     branches-ignore:
       - main
 env:
   TEST_GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   TEST_REPO: ${{ github.repository }}
   TEST_SLACK_WEBHOOK_URL: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
+
+permissions:
+  actions: write
 
 jobs:
   build:
