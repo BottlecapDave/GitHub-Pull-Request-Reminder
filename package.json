@@ -26,11 +26,11 @@
     "@semantic-release/git": "10.0.1",
     "commitizen": "4.3.1",
     "conventional-changelog-eslint": "6.0.0",
-    "cz-customizable": "7.2.1",
-    "husky": "9.1.6",
+    "cz-customizable": "7.4.0",
+    "husky": "9.1.7",
     "semantic-release": "24.2.0",
     "ts-node": "10.9.2",
-    "typescript": "5.6.3"
+    "typescript": "5.7.2"
   },
   "config": {
     "commitizen": {
