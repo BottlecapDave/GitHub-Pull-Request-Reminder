@@ -16,6 +16,7 @@ Sends a notification to a Slack webhook highlighting open pull requests for a gi
 | GITHUB_EXCLUDED_LABELS | The labels that pull requests must not have assigned to them. Any label must be present for the merge request to be ignored. This should be comma separated. | `excluded-label-1,excluded-label-2` |
 | SLACK_WEBHOOK_URL    | The URL of the slack incoming webhook to send the notification to.                                            |                |
 | SLACK_TARGET         | The target of the slack message. This is `@here` by default. | `@here` |
+| MS_TEAMS_WEBHOOK_URL    | The URL of the MS Teams incoming webhook to send the notification to.                                            |                |
 
 ## Docker
 
@@ -29,7 +30,7 @@ Because the logic is within a docker image, it can be run in a variety of places
 
 This is available as a GitHub Action. You can run it on a schedule like so
 
-```
+```yaml
 name: Pull Request Reminder
 on:
   schedule:
@@ -48,8 +49,11 @@ jobs:
           include-draft: 'true'
           mandatory-labels: 'test-label-1,test-label-2'
           excluded-labels: 'excluded-label-1,excluded-label-1'
+          # If sending the notification to slack
           slack-webhook-url: ${{ secrets.TEST_SLACK_WEBHOOK_URL }}
           slack-target: '@here'
+          # If sending the notification to MS Teams
+          ms-teams-webhook-url:  ${{ secrets.TEST_MS_TEAMS_WEBHOOK_URL }}
 ```
 
 ## Build

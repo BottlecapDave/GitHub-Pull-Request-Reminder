@@ -26,9 +26,12 @@ inputs:
     required: false
   slack-webhook-url:
     description: 'The URL of the slack incoming webhook to send the notification to.'
-    required: true
+    required: false
   slack-target:
     description: 'The target of the slack message. This is `@here` by default.'
+    required: false
+  ms-teams-webhook-url:
+    description: 'The URL of the MS Teams incoming webhook to send the notification to.'
     required: false
 runs:
   using: 'docker'
@@ -42,3 +45,4 @@ runs:
     GITHUB_EXCLUDED_LABELS: ${{ inputs.excluded-labels }}
     SLACK_WEBHOOK_URL: ${{ inputs.slack-webhook-url }}
     SLACK_TARGET: ${{ inputs.slack-target }}
+    MS_TEAMS_WEBHOOK_URL: ${{ inputs.ms-teams-webhook-url }}
