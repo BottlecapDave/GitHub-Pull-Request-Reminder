@@ -26,6 +26,11 @@ function assertMergeRequests(mergeRequests: IGitHubMergeRequest[], includeWip: b
   let draftPresent = false;
   let lastMergeRequestTimestamp: Date | undefined;
   for (const mergeRequest of mergeRequests) {
+    // Skip merge requests that are not for integration tests, as these might be external PRs
+    if (!mergeRequest.labels.find(x => x.name === 'integration-test')) {
+      continue
+    } 
+    
     if (mergeRequest.title.toLowerCase().includes('wip')) {
       wipPresent = true
     }
