@@ -56,7 +56,7 @@ describe('GitHubService', () => {
   
     await expect(service.getMergeRequests(accessToken, request))
           .rejects
-          .toThrow(`Not authenticated to see merge requests for repo '${request.repos[0]}'`);
+          .toThrow(`Not authenticated to see pull requests for repo '${request.repos[0]}'`);
   })
   
   test('when repos does not exist, then error is thrown', async () => {
@@ -72,7 +72,7 @@ describe('GitHubService', () => {
           .toThrow(`Failed to find repo '${request.repos[0]}'`);
   })
   
-  test('when include draft is set to false, then no draft merge requests are returned', async () => {
+  test('when include draft is set to false, then no draft pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -84,7 +84,7 @@ describe('GitHubService', () => {
     assertMergeRequests(mergeRequests, request.includeWorkInProgress, request.includeDraft);
   })
   
-  test('when include draft is set to true, then draft merge requests are returned', async () => {
+  test('when include draft is set to true, then draft pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -96,7 +96,7 @@ describe('GitHubService', () => {
     assertMergeRequests(mergeRequests, request.includeWorkInProgress, request.includeDraft);
   })
   
-  test('when include wip is set to false, then no wip merge requests are returned', async () => {
+  test('when include wip is set to false, then no wip pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -108,7 +108,7 @@ describe('GitHubService', () => {
     assertMergeRequests(mergeRequests, request.includeWorkInProgress, request.includeDraft);
   })
   
-  test('when include wip is set to true, then wip merge requests are returned', async () => {
+  test('when include wip is set to true, then wip pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -120,7 +120,7 @@ describe('GitHubService', () => {
     assertMergeRequests(mergeRequests, request.includeWorkInProgress, request.includeDraft);
   })
   
-  test('when mandatory label is specified but not present, then no merge requests are returned', async () => {
+  test('when mandatory label is specified but not present, then no pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -133,7 +133,7 @@ describe('GitHubService', () => {
     expect(mergeRequests.length).toEqual(0);
   })
   
-  test('when mandatory label is specified, then only merge requests with the labels are returned', async () => {
+  test('when mandatory label is specified, then only pull requests with the labels are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -145,10 +145,10 @@ describe('GitHubService', () => {
     
     expect(mergeRequests.length).toEqual(1);
     assertMergeRequest(mergeRequests[0]);
-    expect(mergeRequests[0].title).toEqual('Merge request with mandatory labels');
+    expect(mergeRequests[0].title).toEqual('Pull request with mandatory labels');
   })
 
-  test('when excluded label is specified but not present, then merge requests are returned', async () => {
+  test('when excluded label is specified but not present, then pull requests are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
@@ -161,7 +161,7 @@ describe('GitHubService', () => {
     assertMergeRequests(mergeRequests, request.includeWorkInProgress, request.includeDraft);
   })
   
-  test('when excluded label is specified, then only merge requests without the excluded labels are returned', async () => {
+  test('when excluded label is specified, then only pull requests without the excluded labels are returned', async () => {
     const accessToken = getAccessToken();
     const request: IGitHubMergeRequestRequest = {
       ...createRequestData(),
