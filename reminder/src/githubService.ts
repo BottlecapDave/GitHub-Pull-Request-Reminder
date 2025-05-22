@@ -53,10 +53,10 @@ export class GitHubService {
                 const response = await axios.get(`https://api.github.com/repos/${repo}/pulls?sort=asc&page=${page}&per_page=${pageSize}`, requestConfig);
 
                 if (response.status === 401) {
-                    throw new Error(`Not authenticated to see merge requests for repo '${repo}'`);
+                    throw new Error(`Not authenticated to see pull requests for repo '${repo}'`);
                 }
                 else if (response.status === 403) {
-                    throw new Error(`Not authorised to see merge requests for repo '${repo}'`);
+                    throw new Error(`Not authorised to see pull requests for repo '${repo}'`);
                 }
                 else if (response.status === 404) {
                     throw new Error(`Failed to find repo '${repo}'`);

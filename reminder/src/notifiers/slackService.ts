@@ -14,7 +14,7 @@ export class SlackService {
             type: "section",
             text: {
                 type: "mrkdwn",
-                text: `${config.target} Looks like there are some open merge requests...`
+                text: `${config.target} Looks like there are some open pull requests...`
             }
         },
         {
@@ -38,7 +38,7 @@ export class SlackService {
         await axios.post(
             config.webhookUrl,
             {
-                text: "Looks like there are some open merge requests...",
+                text: "Looks like there are some open pull requests...",
                 blocks
             },
             requestConfig
