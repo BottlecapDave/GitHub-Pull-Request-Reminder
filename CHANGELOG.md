@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.4...v1.0.5) (2025-05-22)
+
+
+### Bug Fixes
+
+* Updated references from merge request to pull request (Thanks [@niksoper](https://github.com/niksoper)) ([d216948](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/d216948005d966719b80b3073ca23ff51baf5340))
+
 ## [1.0.4](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.3...v1.0.4) (2024-12-28)
 
 ## [1.0.3](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.2...v1.0.3) (2024-07-17)
