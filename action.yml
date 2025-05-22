@@ -22,7 +22,7 @@ inputs:
     description: 'The labels that pull requests must have assigned to them. All labels must be present. This should be comma separated.'
     required: false
   excluded-labels:
-    description: 'The labels that pull requests must not have assigned to them. Any label must be present for the merge request to be ignored. This should be comma separated.'
+    description: 'The labels that pull requests must not have assigned to them. Any label must be present for the pull request to be ignored. This should be comma separated.'
     required: false
   slack-webhook-url:
     description: 'The URL of the slack incoming webhook to send the notification to.'

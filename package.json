@@ -1,7 +1,7 @@
 {
   "name": "github-pull-request-reminder",
   "version": "1.0.0",
-  "description": "Sends reminders of open merge requests in GitLab",
+  "description": "Sends reminders of open pull requests in GitLab",
   "main": "index.js",
   "scripts": {
     "build": "tsc ./.build/*.ts --noEmit",
