@@ -34,8 +34,8 @@ async function run() {
     }
 
     const slackService = new SlackService();
-    const gitlabService = new GitHubService();
-    const reminderService = new ReminderService(gitlabService, slackService);
+    const githubService = new GitHubService();
+    const reminderService = new ReminderService(githubService, slackService);
 
     return reminderService.sendReminder(config);
 }
