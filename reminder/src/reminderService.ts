@@ -7,10 +7,10 @@ export interface IReminderRequest extends IGitHubMergeRequestRequest {
 }
 
 export class ReminderService {
-    constructor(private gitlabService: GitHubService, private slackService: SlackService) {}
+    constructor(private githubService: GitHubService, private slackService: SlackService) {}
     
     async sendReminder(request: IReminderRequest) {
-        const mergeRequests = await this.gitlabService.getMergeRequests(request.githubAccessToken, request);
+        const mergeRequests = await this.githubService.getMergeRequests(request.githubAccessToken, request);
     
         if (mergeRequests.length > 0) {
             await this.slackService.sendReminder(request.slack, mergeRequests);

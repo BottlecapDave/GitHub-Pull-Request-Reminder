@@ -1,7 +1,7 @@
 {
   "name": "github-pull-request-reminder",
   "version": "1.0.0",
-  "description": "Sends reminders of open merge requests in GitLab",
+  "description": "Sends reminders of open pull requests in Github",
   "main": "index.js",
   "scripts": {
     "build": "tsc ./.build/*.ts --noEmit",
@@ -28,9 +28,9 @@
     "conventional-changelog-eslint": "6.0.0",
     "cz-customizable": "7.4.0",
     "husky": "9.1.7",
-    "semantic-release": "24.2.0",
+    "semantic-release": "24.2.3",
     "ts-node": "10.9.2",
-    "typescript": "5.7.2"
+    "typescript": "5.8.2"
   },
   "config": {
     "commitizen": {

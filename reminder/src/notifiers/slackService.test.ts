@@ -20,8 +20,8 @@ function createMergeRequests(): IGitHubMergeRequest[] {
         full_name: "test/github-pull-request-reminder-test",
       },
     },
-    title: "Merge request with mandatory labels",
-    html_url: "https://gitlab.com/test/github-pull-request-reminder-test/-/merge_requests/1",
+    title: "Pull request with mandatory labels",
+    html_url: "https://github.com/test/github-pull-request-reminder-test/-/merge_requests/1",
     draft: false,
   },
   {
@@ -35,8 +35,8 @@ function createMergeRequests(): IGitHubMergeRequest[] {
         full_name: "test/github-pull-request-reminder-test",
       },
     },
-    title: "wip: Merge request ",
-    html_url: "https://gitlab.com/test/github-pull-request-reminder-test/-/merge_requests/2",
+    title: "wip: Pull request ",
+    html_url: "https://github.com/test/github-pull-request-reminder-test/-/merge_requests/2",
     draft: false,
   }]
 }
