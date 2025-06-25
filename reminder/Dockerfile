@@ -1,4 +1,4 @@
-FROM node:22.16-bookworm as build
+FROM node:24.2-bookworm as build
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY src/. src/.
 
 RUN npm run build
 
-FROM node:22.16-bookworm as deploy
+FROM node:24.2-bookworm as deploy
 WORKDIR /app
 
 COPY --from=build /app/lib /app/lib

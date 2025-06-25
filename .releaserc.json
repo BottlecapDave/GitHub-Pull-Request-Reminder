@@ -6,17 +6,19 @@
       {
         "preset": "angular",
         "releaseRules": [
-          { "type": "chore", "scope": "deps-dev", "release": "patch" }
+          { "type": "chore", "scope": "deps-dev", "release": "patch" },
+          { "type": "chore", "scope": "deps", "release": "patch" }
         ]
       }
     ],
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "angular",
+        "preset": "conventionalcommits",
         "presetConfig": {
           "types": [
-            { "type": "chore", "scope": "deps-dev", "section": "Dependencies", "hidden": false }
+            { "type": "chore", "scope": "deps-dev", "section": "Dependencies", "hidden": false },
+            { "type": "chore", "scope": "deps", "section": "Dependencies", "hidden": false }
           ]
         }
       }
