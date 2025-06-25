@@ -1,3 +1,14 @@
+## [1.0.6](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.5...v1.0.6) (2025-06-25)
+
+### Dependencies
+
+* **deps-dev:** Bump @semantic-release/exec ([69c1dec](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/69c1deca3c32dcbd8b8432b273b3a4361adac3d1))
+* **deps-dev:** Bump the major group across 2 directories with 3 updates ([189784a](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/189784ad0f4e02e87f0f73d96a775248b59f2abe))
+* **deps:** Bump node ([c6e560d](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/c6e560d39e5521ba5171711219c69900d1fe81dd))
+* **deps:** Bump node ([a0b8724](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/a0b87242ebb5513f206ffe3571b5c2228b6a2f04))
+* **deps:** Bump the minor_patch group across 1 directory with 2 updates ([1377e4e](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/1377e4e87534e3a53460054eae3b688f240409fd))
+* **deps:** Bump the minor_patch group across 2 directories with 5 updates ([538756b](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/538756bec15d4b02cbb7bd0032491d92ce327e34))
+
 ## [1.0.5](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.4...v1.0.5) (2025-05-22)
 
 
