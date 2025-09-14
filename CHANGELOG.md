@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.7...v1.0.8) (2025-09-14)
+
+### Dependencies
+
+* **deps:** Update axios to 1.12.1 ([cacfb80](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/cacfb800c7a71581bf438c02d1e59641fa4b29fc))
+* **deps:** Update semantic release to 24.2.8 ([9358e33](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/9358e33bffc5a9ebc2178dd09ad6e9c454909eb5))
+
 ## [1.0.7](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.6...v1.0.7) (2025-09-04)
 
 ### Dependencies
