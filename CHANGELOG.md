@@ -1,3 +1,12 @@
+## [1.0.9](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.8...v1.0.9) (2026-06-07)
+
+### Dependencies
+
+* **deps-dev:** Bump the minor_patch group across 2 directories with 3 updates ([ed4fcf1](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/ed4fcf111a98221d44dd6482409163949613ceb4))
+* **deps:** Bump node ([80c02ad](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/80c02ad25e9f23a1c1cb073208d0b0b56c9069a6))
+* **deps:** Bump node ([8fc73eb](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/8fc73eb100949332ba2233114e833a808b53871b))
+* **deps:** Bump the minor_patch group across 2 directories with 6 updates ([64149d7](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/commit/64149d729281c6b6b1b51e10bf2e63dfa4ef3e71))
+
 ## [1.0.8](https://github.com/BottlecapDave/GitHub-Pull-Request-Reminder/compare/v1.0.7...v1.0.8) (2025-09-14)
 
 ### Dependencies
