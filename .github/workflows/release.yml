@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: asdf_install
-        uses: asdf-vm/actions/install@v3
+        uses: asdf-vm/actions/install@v4
       - name: Install dependencies
         run: (cd reminder && npm ci)
       - name: Run tests Image
@@ -31,17 +31,17 @@ jobs:
     - test
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: asdf_install
-        uses: asdf-vm/actions/install@v3
+        uses: asdf-vm/actions/install@v4
       - name: Install dependencies
         run: npm ci
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run release
       - name: Merge main into develop
-        uses: devmasx/merge-branch@master
+        uses: devmasx/merge-branch@1.4.0
         with:
           type: now
           message: "chore: Merged main into develop"

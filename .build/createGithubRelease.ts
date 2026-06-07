@@ -46,8 +46,8 @@ async function createGithubRelease(githubToken: string, githubOwnerRepo: string,
 }
 
 createGithubRelease(
-  process.env.GITHUB_TOKEN,
-  process.env.GITHUB_REPOSITORY,
+  process.env.GITHUB_TOKEN as string,
+  process.env.GITHUB_REPOSITORY as string,
   process.argv[2],
   `${process.argv[3]}\n${bodySuffix}`
 ).then(() => console.log('Success'));
